@@ -58,6 +58,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'slim-rails'
+gem 'html2slim'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails', '~> 4.10.0'
