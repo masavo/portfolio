@@ -1,1 +1,7 @@
-h1 hello world
+- files = {career: "経歴 ＞", skill: "技術 ＞", product: "成果物 ＞"}
+- files.each do |key,val|
+    section.section.fadein
+        div.img-section
+            = image_tag  "index/#{key}.png"
+        div.btn-section
+            = link_to  "#{val}", "/#{key}", class: "my-btn"
