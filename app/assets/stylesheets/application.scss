@@ -15,3 +15,92 @@
  */
 
 @import "bootstrap";
+$section-mb: 6px;
+    
+body {
+    background: #19ABFF;
+}
+// header,navigation-header
+.header {
+    background: #FFFFFF;
+    font-family: HiraginoSans-W6;
+    font-size: 18px;
+    color: #19ABFF;
+}
+.my-nav {
+    padding: 0;
+    margin-bottom: $section-mb;
+    list-style: none;
+    .my-nav-list {
+        display: inline-block;
+        width: 25%;
+        height: 93px;
+        vertical-align: middle;
+    }
+    .my-nav-link {
+        width: 100%;
+        text-decoration: none;
+        padding: 2rem;
+        display: inline-block;
+        text-align: center;
+        &:hover {
+            background: #eee;
+            opacity:0.7;
+            transition: all 0.2s ease;
+            filter: drop-shadow(0 0 15px #ddd);
+        }
+    }
+}
+.default-section{
+    width: 100%;
+    text-align: center;
+}
+.section {
+    background: #fff;
+    height:382px;
+    width: 100%;
+    margin-bottom: $section-mb;
+    .img-section {
+        @extend .default-section;
+        height: 272px;
+        line-height: 272px;
+    }
+    .btn-cection {
+        @extend .default-section;
+        height: 100px;
+        line-height: 100px;
+    }
+}
+
+.my-btn {
+    margin: auto;
+    display: table;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5rem;
+    background: rgba(238,238,238,0.20);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    font-family: HiraMaruPro-W4;
+    font-size: 40px;
+    color: #4B4B4B;
+    padding: 0.5rem;
+    width: 15rem;
+    // &:hover {
+
+    // }
+}
+
+// actions
+.fadein {
+    -webkit-animation: fadeIn 1s ease 0s 1 normal;
+    animation: fadeIn 1s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
