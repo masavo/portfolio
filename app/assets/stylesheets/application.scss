@@ -19,6 +19,8 @@ $section-mb: 6px;
     
 body {
     background: #19ABFF;
+    height: 100%;
+    margin: 0;
 }
 // header,navigation-header
 .header {
@@ -51,6 +53,14 @@ body {
         }
     }
 }
+// index.html
+.img-section {
+    .img-fit {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .default-section{
     width: 100%;
     text-align: center;
