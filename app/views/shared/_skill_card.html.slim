@@ -1,0 +1,14 @@
+- @skills.each do|skill|
+    div.my-card
+        div.my-card-header
+            h3 
+                = skill.title
+                = image_tag to_image_file_path(skill.title),class: "image-icon"
+            p #{skill.category}
+        table.my-list-group
+            tr
+                th.my-list-item 経験:
+                td = simple_format skill.experience, class: "text-left"
+            tr
+                th.my-list-item 年数:
+                td #{skill.career_length}

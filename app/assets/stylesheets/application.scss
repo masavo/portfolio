@@ -114,3 +114,69 @@ body {
     0% {opacity: 0}
     100% {opacity: 1}
 }
+/*************/
+/*    cards  */
+/*************/
+.wrapper {
+    text-align: center;
+    background: #fff;
+    height: 100%;
+    margin: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+// product_card
+$card-radius: 20px;
+.my-card {
+    margin: 0.5rem;
+    font-family: Arial-BoldMT;
+    color: rgba(0,0,0,0.54);
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    border-radius: $card-radius;
+    width: 20rem;
+    display: inline-block;
+    .my-card-header {
+        line-height: 2;
+        font-size: 20px;
+        background: #D4D0D5;
+        border-radius: $card-radius $card-radius 0 0;
+        h3 {
+            margin:0;
+            padding-left: 4rem;
+            padding-top: 1rem;
+            overflow: hidden;
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 0.8rem;
+            padding-right: 1rem;
+            margin:0;
+            text-align: right;
+        }
+    }
+    .image-icon {
+        margin-right: 1.5rem;
+        float: right;
+        max-width: 36px;
+        height: auto;
+    }
+    .th {
+        width: 30%;
+    }
+    .td {
+        width: 70%;
+        text-align: left;
+        padding: 1.2rem;
+    }
+    .text-left {
+        text-align: left;
+    }
+    .my-list-item {
+        text-align:center;
+        width: 3rem;
+    }
+    .my-list-item:last-child {
+        border-radius: 0 0 $card-radius $card-radius;
+    }
+}
