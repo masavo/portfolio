@@ -1,12 +1,12 @@
 - @products.each do|product|
-    div.my-card
+    div.my-card.fadein
         div.my-card-header
-            h3 #{product["title"]}
-            p #{product.category}
+            h3.card-title #{product["title"]}
+            p.card-description #{product.category}
         table.my-list-group
             tr
                 th 説明:
-                td #{product.text}
+                td.text-left #{product.text}
             tr
                 th.my-list-item URL:
                 td = link_to "GitHubページ",product.url
