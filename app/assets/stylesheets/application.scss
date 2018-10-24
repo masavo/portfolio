@@ -99,20 +99,51 @@ body {
 
     // }
 }
+/**********/
+/* motion */
+/**********/
 
-// actions
+// ripple effect
+.ripple { // ripple-effectの親要素に付ける
+    overflow: hidden;
+    position: relative;
+}
+.ripple-effect {
+    /* 値の変更はエフェクト形体・サイズ・スピードに影響する */
+    width: 150px;
+    height: 150px;
+
+    /* 必須 */
+    position: absolute;
+    border-radius: 100%;
+    pointer-events: none;
+    transform: scale(0);
+    opacity: 0;
+}
+.ripple-effect.is-blue   { background: #4aa3df;}
+
+/* classが付与されたらアニメーションを実行 */
+.ripple-effect.is-show {
+    animation: ripple 0.75s ease-out;
+}
+
+/* アニメーションの定義 */
+@keyframes ripple {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+// fadein
 .fadein {
-    -webkit-animation: fadeIn 1s ease 0s 1 normal;
-    animation: fadeIn 1s ease 0s 1 normal;
+    transition: .8s;
+	opacity: 0;
 }
-
-@keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
-@-webkit-keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
+.mv02{
+	opacity: 1.0;
 }
 /*************/
 /*    cards  */
@@ -127,6 +158,17 @@ body {
 }
 // product_card
 $card-radius: 20px;
+.card-category {
+    font-family: Arial-BoldMT;
+    color: rgba(0,0,0,0.64);
+    background: #fff;
+    width: 98%;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-radius: $card-radius;
+    margin: 0 auto 1rem;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.25);
+}
 .my-card {
     margin: 0.5rem;
     font-family: Arial-BoldMT;
@@ -141,14 +183,18 @@ $card-radius: 20px;
         font-size: 20px;
         background: #D4D0D5;
         border-radius: $card-radius $card-radius 0 0;
-        h3 {
-            margin:0;
-            padding-left: 4rem;
+        .card-title {
             padding-top: 1rem;
             overflow: hidden;
             font-size: 1.2rem;
         }
-        p {
+        .for-img-icon {
+            @extend .card-title;
+            margin:0;
+            padding-left: 4rem;
+            overflow: hidden;
+        }
+        .card-description {
             font-size: 0.8rem;
             padding-right: 1rem;
             margin:0;
@@ -157,17 +203,21 @@ $card-radius: 20px;
     }
     .image-icon {
         margin-right: 1.5rem;
+        margin-bottom: 0.5rem;
         float: right;
         max-width: 36px;
         height: auto;
     }
-    .th {
+    tbody {
+        padding: 0.4rem;
+    }
+    th {
+        padding-top: 0.6rem;
+        vertical-align: top;
         width: 30%;
     }
-    .td {
-        width: 70%;
-        text-align: left;
-        padding: 1.2rem;
+    td {
+        padding: 0.6rem;
     }
     .text-left {
         text-align: left;
