@@ -1,5 +1,11 @@
 {
   "name": "portfolio",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery-inview": "^1.1.2"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Masanori Hiroki <hiroki.masanori06@gmail.com>",
+  "license": "MIT"
 }
