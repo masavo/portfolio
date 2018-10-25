@@ -117,14 +117,14 @@ Product.create([
         title: "ポートフォリオ",
         text: "Ruby on Rails で作成しました。railsの使い方の復習のために作成しました。
         ",
-        url: "aaaaa",
+        url: "https://github.com/hiroki06/portfolio",
         duration: "2週間"
     },{
         category: "練習用",
         title: "web掲示板",
         text: "Ruby on Rails の研修で作成しました。基本的なCURD機能があります。
         Railsの基本的な使い方に加えて、開発でよく使われるGemについてやテスト駆動開発について学びました。",
-        url: "aaaaa",
+        url: "https://github.com/hiroki06/rails-bbs",
         duration: "2週間"
     }
     # ,{
