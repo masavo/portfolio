@@ -1,14 +1,8 @@
 header.header
     ul.my-nav
-        li.my-nav-list.ripple
-            = link_to "HOME", root_path, class: "my-nav-link"
-            span.ripple-effect.is-blue
-        / li.my-nav-list.ripple
-        /     = link_to "CAREER", career_path, class: "my-nav-link"
-        /     span.ripple-effect.is-blue
-        li.my-nav-list.ripple
-            = link_to "SKILLS", skill_path, class: "my-nav-link"
-            span.ripple-effect.is-blue
-        li.my-nav-list.ripple
-            = link_to "PRODUCTS", product_path, class: "my-nav-link"
-            span.ripple-effect.is-blue
+        - {index: root_path, skill: skill_path, product: product_path}.each do |key,val|
+            li.my-nav-list.ripple
+                = link_to val, class: "my-nav-link"
+                    = image_tag "index/#{key}.png", class: "smartphone-show"
+                    span.smartphone-hide #{key.upcase}
+                span.ripple-effect.is-blue
