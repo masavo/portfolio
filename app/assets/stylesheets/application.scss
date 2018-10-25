@@ -45,6 +45,10 @@ body {
         padding: 2rem;
         display: inline-block;
         text-align: center;
+        &:hover {
+            opacity: 0.8;
+            background: #eee;
+        }
     }
 }
 // index.html
