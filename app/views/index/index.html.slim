@@ -1,7 +1,8 @@
 section.fadein.img-section
     = image_tag  "index/top.png", class: "img-fit"
     h3.img-text Hiroki's Portfolio Site
-- files = {career: "経歴 ＞", skill: "技術 ＞", product: "成果物 ＞"}
+/ - files = {career: "経歴 ＞", skill: "技術 ＞", product: "成果物 ＞"}
+- files = { skill: "技術 ＞", product: "成果物 ＞"}
 - files.each do |key,val|
     section.section.fadein
         div.img-section
