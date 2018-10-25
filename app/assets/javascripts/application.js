@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery3
-//= require jquery-inview
+//= require jquery.inview
 //= require rails-ujs
 //= require activestorage
 //= require popper
