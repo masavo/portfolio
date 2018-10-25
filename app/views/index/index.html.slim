@@ -1,10 +1,11 @@
-section.fadin.img-section
-    div
-        = image_tag  "index/top.png", class: "img-fit"
+section.fadein.img-section
+    = image_tag  "index/top.png", class: "img-fit"
+    h3.img-text Hiroki's Portfolio Site
 - files = {career: "経歴 ＞", skill: "技術 ＞", product: "成果物 ＞"}
 - files.each do |key,val|
     section.section.fadein
         div.img-section
             = image_tag  "index/#{key}.png"
         div.btn-section
-            = link_to  "#{val}", "/#{key}", class: "my-btn"
+            button.my-btn
+                a[href="/#{key}"] #{val}

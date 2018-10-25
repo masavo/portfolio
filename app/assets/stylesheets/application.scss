@@ -18,6 +18,7 @@
 $section-mb: 6px;
     
 body {
+    font-family: HiraginoSans-W6;
     background: #19ABFF;
     height: 100%;
     margin: 0;
@@ -25,7 +26,6 @@ body {
 // header,navigation-header
 .header {
     background: #FFFFFF;
-    font-family: HiraginoSans-W6;
     font-size: 18px;
     color: #19ABFF;
 }
@@ -49,12 +49,23 @@ body {
 }
 // index.html
 .img-section {
-    .img-fit {
-        width: 100%;
-        height: auto;
-    }
+    position: relative;
 }
-
+.img-fit {
+    width: 100%;
+    height: auto;
+}
+.img-text {
+    position: absolute;
+    color: white;
+    text-shadow: 1px 2px 4px #aaa;
+    top: 50%;
+    left: 50%;
+    // 文字のづれを修正
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
 .default-section{
     width: 100%;
     text-align: center;
@@ -77,6 +88,7 @@ body {
 }
 
 .my-btn {
+    cursor: pointer;
     margin: auto;
     display: table;
     text-decoration: none;
@@ -89,9 +101,14 @@ body {
     color: #4B4B4B;
     padding: 0.5rem;
     width: 15rem;
-    // &:hover {
-
-    // }
+    a {
+        color: #4B4B4B;
+        text-decoration: none;
+    }
+    &:hover {
+        background: #eee;
+        opacity: 0.8;
+    }
 }
 /**********/
 /* motion */
