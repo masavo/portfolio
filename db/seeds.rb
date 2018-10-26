@@ -141,3 +141,4 @@ Product.create([
     #     duration: "2週間"
     # }
 ])
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
