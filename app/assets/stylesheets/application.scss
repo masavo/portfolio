@@ -37,10 +37,11 @@ body {
     .my-nav-list {
         display: inline-block;
         // width: 25%;
-        width: 33%;
+        width: 33.333%;
         vertical-align: middle;
     }
     .my-nav-link {
+        cursor: pointer;
         width: 100%;
         text-decoration: none;
         padding: 0.8rem;
