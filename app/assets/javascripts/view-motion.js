@@ -14,6 +14,7 @@ const ready = () => {
         var y = e.offsetY;
 
         var $effect = $(_self).find('.ripple-effect');
+        var url = $(_self).find('a').attr('val');
         var w = $effect.width();
         var h = $effect.height();
 
@@ -34,7 +35,8 @@ const ready = () => {
                 */
             setTimeout(function () {
                 $effect.removeClass('is-show');
-            }, 750);
+                location.href = url;
+            }, 500);
         }
         return false;
     });
