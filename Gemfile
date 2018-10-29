@@ -64,10 +64,19 @@ gem 'html2slim'
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails', '~> 4.10.0'
+  gem 'license_finder'
 end
 
 group :development do
   gem 'pry-byebug'
+  gem 'brakeman' # セキュリティ問題をチェックしてくれる
+  gem 'bundle-audit'
+  gem 'rack-mini-profiler'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'rails_best_practices', require: false
+  gem 'annotate'
 end
 
 group :test do
