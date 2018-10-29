@@ -107,13 +107,12 @@ body {
     color: #4B4B4B;
     padding: 0.5rem;
     width: 15rem;
-    a {
-        color: #4B4B4B;
-        text-decoration: none;
-    }
     &:hover {
         background: #eee;
         opacity: 0.8;
+    }
+    &:link {
+        text-decoration: none;
     }
 }
 /**********/
