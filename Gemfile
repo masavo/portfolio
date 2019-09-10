@@ -65,6 +65,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails', '~> 4.10.0'
   gem 'license_finder'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -86,4 +87,3 @@ group :test do
 end
 
 gem 'activeadmin'
-gem 'devise'
