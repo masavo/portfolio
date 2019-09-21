@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: products
@@ -12,10 +14,10 @@
 
 FactoryBot.define do
   factory :product do
-    category "MyString"
-    title "MyString"
-    text "MyString"
-    url "MyString"
-    duration "MyString"
+    category 'MyString'
+    title 'MyString'
+    text 'MyString'
+    url 'MyString'
+    duration 'MyString'
   end
 end

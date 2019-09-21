@@ -1,1 +1,15 @@
-inherit_from: .rubocop_todo.yml
+# require: rubocop-rails
+#
+Bundler:
+  SingleGroup:
+    Enabled: false
+  GroupType:
+    Description: 'Use enforced type group'
+    EnforcedStyle: symbol
+    SupportedStyles:
+      - symbol
+      - single_quotes
+    Enabled: true
+  SortGemAscending:
+    Description: 'Sort the gem in alphabetical order'
+    Enabled: true

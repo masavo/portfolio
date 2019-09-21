@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: skills
@@ -12,8 +14,8 @@
 #
 
 class Skill < ApplicationRecord
-    validates :category, presence: true
-    validates :title,  presence: true
-    validates :experience,  presence: true
-    validates :career_length, presence: true
+  validates :category, presence: true
+  validates :title, presence: true
+  validates :experience, presence: true
+  validates :career_length, presence: true
 end

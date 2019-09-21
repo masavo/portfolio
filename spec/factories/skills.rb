@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: skills
@@ -13,6 +15,5 @@
 
 FactoryBot.define do
   factory :skill do
-    
   end
 end

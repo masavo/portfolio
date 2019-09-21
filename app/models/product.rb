@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: products
@@ -11,9 +13,9 @@
 #
 
 class Product < ApplicationRecord
-    validates :category, presence: true
-    validates :title,  presence: true
-    validates :text,  presence: true
-    validates :url, presence: true
-    validates :duration, presence: true
+  validates :category, presence: true
+  validates :title, presence: true
+  validates :text, presence: true
+  validates :url, presence: true
+  validates :duration, presence: true
 end

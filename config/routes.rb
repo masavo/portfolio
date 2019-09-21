@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -5,5 +7,5 @@ Rails.application.routes.draw do
   # get '/career', to: 'career#career'
   get '/skill', to: 'skill#skill'
   get '/product', to: 'product#product'
-  root "index#index"
+  root 'index#index'
 end
