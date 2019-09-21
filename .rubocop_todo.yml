@@ -5,6 +5,7 @@
 # one by one as the offenses are removed from the code base.
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
+require: rubocop-gemfile
 
 # Offense count: 11
 # Cop supports --auto-correct.
@@ -12,7 +13,6 @@
 # Include: **/*.gemfile, **/Gemfile, **/gems.rb
 Bundler/OrderedGems:
   Exclude:
-    - 'Gemfile'
 
 # Offense count: 3
 # Cop supports --auto-correct.
