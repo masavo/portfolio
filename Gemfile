@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # rails generate graphql:install frozen_string_literal: true
 
 source 'https://rubygems.org'
@@ -17,10 +19,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'uglifier', '>= 1.3.0' # compressor for JavaScript assets
 gem 'graphql'
 gem 'graphql-batch'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'uglifier', '>= 1.3.0' # compressor for JavaScript assets
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,6 +40,7 @@ group :development do
   gem 'brakeman' # セキュリティ問題をチェックしてくれる
   gem 'bullet'
   gem 'bundle-audit'
+  gem 'graphiql-rails'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry-byebug'
   gem 'rack-mini-profiler'
@@ -56,5 +59,3 @@ group :test do
 end
 
 gem 'activeadmin'
-
-gem 'graphiql-rails', group: :development
