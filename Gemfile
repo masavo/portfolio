@@ -7,6 +7,7 @@ ruby '2.5.1'
 gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'bootstrap'
 gem 'coffee-rails', '~> 4.2'
+gem 'devise'
 gem 'html2slim'
 gem 'jquery-rails'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
