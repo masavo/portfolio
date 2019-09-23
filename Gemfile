@@ -45,6 +45,7 @@ group :development do
   gem 'pry-byebug'
   gem 'rack-mini-profiler'
   gem 'rails_best_practices', require: false
+  gem 'ridgepole'
   gem 'rubocop-rails', require: false
   gem 'spring' # Spring speeds up development by keeping your application running in the background.
   gem 'spring-commands-rspec'

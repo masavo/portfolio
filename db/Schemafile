@@ -1,0 +1,6 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+require 'active_admin_comments.schema'
+require 'admin_users.schema'
+require 'products.schema'
+require 'skills.schema'
