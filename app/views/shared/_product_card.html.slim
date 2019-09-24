@@ -1,15 +1,15 @@
 - @products.each do|product|
-    div.my-card.fadein
-        div.my-card-header
-            h3.card-title #{product["title"]}
-            p.card-description #{product.category}
-        table.my-list-group
-            tr
-                th.my-list-item 説明:
-                td.text-left #{product.text}
-            tr
-                th.my-list-item URL:
-                td = link_to "GitHubページ",product.url
-            tr
-                th.my-list-item 期間:
-                td #{product.duration}
+  div.my-card.fadein
+    div.my-card-header
+      h3.card-title #{product["title"]}
+      p.card-description #{product.category}
+    table.my-list-group
+      tr
+        th.my-list-item 説明:
+        td.text-left #{product.text}
+      tr
+        th.my-list-item URL:
+        td = link_to "GitHubページ",product.url
+      tr
+        th.my-list-item 期間:
+        td #{product.duration}
