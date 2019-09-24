@@ -11,5 +11,19 @@ module Types
     def test_field
       'Hello World!'
     end
+
+    field :skills, [Types::SkillType], null: false
+    field :skill, Types::SkillType, null: false do
+      argument :id, Int, required: false
+    end
+
+    def skills
+      Skill.all
+    end
+
+    def skill(id:)
+      Skill.find(id)
+    end
+
   end
 end
