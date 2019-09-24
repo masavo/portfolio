@@ -12,13 +12,11 @@ module Types
       'Hello World!'
     end
 
-    field :skills, [Types::SkillType], null: false
+    field :skills, Types::SkillType.connection_type, null: false, resolve: ->  (_object, _args, _context) do
+      Skill.all
+    end
     field :skill, Types::SkillType, null: false do
       argument :id, Int, required: false
-    end
-
-    def skills
-      Skill.all
     end
 
     def skill(id:)
