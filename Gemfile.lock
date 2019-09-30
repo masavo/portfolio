@@ -151,6 +151,8 @@ GEM
     factory_bot_rails (4.10.0)
       factory_bot (~> 4.10.0)
       railties (>= 3.0.0)
+    faker (2.5.0)
+      i18n (~> 1.6.0)
     ffi (1.11.1)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
@@ -430,6 +432,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   factory_bot_rails (~> 4.10.0)
+  faker
   graphiql-rails
   graphql
   graphql-batch
