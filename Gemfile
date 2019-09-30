@@ -30,6 +30,9 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'factory_bot_rails', '~> 4.10.0'
   gem 'license_finder'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'sqlite3'
@@ -44,7 +47,6 @@ group :development do
   gem 'bundle-audit'
   gem 'graphiql-rails'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'pry-byebug'
   gem 'rack-mini-profiler'
   gem 'rails_best_practices', require: false
   gem 'ridgepole'
