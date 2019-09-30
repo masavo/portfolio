@@ -7,23 +7,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Category.create([
+  {name: 'language'},
+  {name: 'design'},
+  {name: 'office'},
+
+]
+)
 Skill.create([
                {
-                 category: 'language',
+                 category: Category.find_by(name: 'language'),
                  title: 'Ruby',
                  experience:
                    "CSV加工やテキスト処理、ログイン機能、DBアクセス、CRUD機能などの実装経験があります。
                    ",
                  career_length: '2年'
                }, {
-                 category: 'language',
+                 category: Category.find_by(name: 'language'),
                  title: 'Ruby on Rails',
                  experience:
             "実務経験はこれからですが、railsを使って、個人運営レベルの小規模サービスは問題なく作れる自信があります。
             ",
                  career_length: '1ヶ月'
                }, {
-                 category: 'language',
+                 category: Category.find_by(name: 'language'),
                  title: 'JavaScript',
                  experience:
         "chrome developper toolを用いたデバッグ、consoleを用いたパフォーマンスチェックができます。
@@ -32,19 +39,19 @@ Skill.create([
         ",
                  career_length: '2年'
                }, {
-                 category: 'language',
+                 category: Category.find_by(name: 'language'),
                  title: 'CoffeeScript',
                  experience:
         "JavaScriptと同じように使えます。
         ",
                  career_length: '2年'
                }, {
-                 category: 'language',
+                 category: Category.find_by(name: 'language') ,
                  title: 'Vue.js',
                  experience: '趣味で作成しているchrome拡張機能を作る際に利用しました。設定画面の作成で利用しました。',
                  career_length: '4ヶ月(趣味で利用)'
                }, {
-                 category: 'language',
+                 category: Category.find_by(name: 'language') ,
                  title: 'Nuxt.js',
                  experience:
             "Railsでのポートフォリオ作成前に、イメージを掴むためのプロトタイプ作成で使用しました。
@@ -52,19 +59,19 @@ Skill.create([
             ",
                  career_length: '2日'
                }, {
-                 category: 'language',
+                 category: Category.find_by(name: 'language') ,
                  title: 'jQuery',
                  experience: '実務で利用していました。',
                  career_length: '2年'
                }, {
-                 category: 'language',
+                 category: Category.find_by(name: 'language') ,
                  title: 'MySQL',
                  experience:
             "CURD操作、結合、複雑なselect文の作成ができます。
             ",
                  career_length: '2年'
                }, {
-                 category: 'language',
+                 category: Category.find_by(name: 'language') ,
                  title: 'Linux command',
                  experience:
             "自分でaliasを追加したり、ShellScriptを書いてコマンドを追加できます。
@@ -72,28 +79,28 @@ Skill.create([
             ",
                  career_length: '2年'
                }, {
-                 category: 'design',
+                 category: Category.find_by(name: 'design') ,
                  title: 'sketch',
                  experience:
             "コンポーネントを活用してモックが作れます。
             ",
                  career_length: '3週間'
                }, {
-                 category: 'design',
+                 category: Category.find_by(name: 'design') ,
                  title: 'Adobe Illustrator',
                  experience:
             "ベジェ曲線を扱えます。簡単なロゴ、シンプルな連続パターンが作れます。
             ",
                  career_length: '3週間'
                }, {
-                 category: 'design',
+                 category: Category.find_by(name: 'design') ,
                  title: 'GIMP',
                  experience:
             "基本的な使い方がわかります。コラージュが作れます。
             ",
                  career_length: '3週間'
                }, {
-                 category: 'Office',
+                 category: Category.find_by(name: 'Office') ,
                  title: 'MicrosoftOffice',
                  experience:
             "Word,Excel,PowerPointがある程度使えます。
@@ -101,7 +108,7 @@ Skill.create([
             ",
                  career_length: '2年'
                }, {
-                 category: 'others',
+                 category: Category.find_by(name: 'others') ,
                  title: 'Git',
                  experience:
             "clone → add → commit → push → fetch → merge
@@ -114,14 +121,14 @@ Skill.create([
 
 Product.create([
                  {
-                   category: '練習用',
+                   category: Category.find_by(name: '練習用') ,
                    title: 'ポートフォリオ',
                    text: "Ruby on Rails で作成しました。railsの使い方の復習のために作成しました。
                      ",
                    url: 'https://github.com/hiroki06/portfolio',
                    duration: '2週間'
                  }, {
-                   category: '練習用',
+                   category: Category.find_by(name: '練習用') ,
                    title: 'web掲示板',
                    text: "Ruby on Rails の研修で作成しました。基本的なCURD機能があります。
         Railsの基本的な使い方に加えて、開発でよく使われるGemについてやテスト駆動開発について学びました。",

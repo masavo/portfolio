@@ -2,6 +2,6 @@
 # vi: set ft=ruby :
 require 'schema/active_admin_comments.schema'
 require 'schema/admin_users.schema'
-require 'schema/categorys.schema'
+require 'schema/categories.schema'
 require 'schema/products.schema'
 require 'schema/skills.schema'

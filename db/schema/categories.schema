@@ -1,0 +1,5 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table "categories", force: :cascade do |t|
+  t.string "name"
+end
