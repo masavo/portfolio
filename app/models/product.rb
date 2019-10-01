@@ -18,4 +18,7 @@ class Product < ApplicationRecord
   validates :text, presence: true
   validates :url, presence: true
   validates :duration, presence: true
+
+  belongs_to :category
+
 end
