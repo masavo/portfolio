@@ -26,4 +26,7 @@ class Skill < ApplicationRecord
     where('created_at BETWEEN ? AND ?', from, to)
   }
 
+  def explanation_size
+    experience.size
+  end
 end
