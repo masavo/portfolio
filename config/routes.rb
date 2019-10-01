@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get '/career', to: 'career#career'
-  get '/skill', to: 'skill#skill'
-  get '/product', to: 'product#product'
+  get '/2018/skill', to: 'eighteen/skill#skill'
+  get '/2018/product', to: 'product#product'
   root 'index#index'
 end

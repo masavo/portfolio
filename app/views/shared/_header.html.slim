@@ -1,6 +1,6 @@
-header.header
+
   ul.my-nav
-    - {index: root_path, skill: skill_path, product: product_path}.each do |key,val|
+    - {index: root_path, skill: '/2018/skill', product: '/2018/product'}.each do |key,val|
       li.my-nav-list.ripple
         a.my-nav-link[val="#{val}"]
           = image_tag "index/#{key}.png", class: "smartphone-show"
