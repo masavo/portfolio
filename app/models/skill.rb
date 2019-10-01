@@ -22,4 +22,8 @@ class Skill < ApplicationRecord
   belongs_to :category, required: false
   belongs_to :product, required: false
 
+  scope :recent, ->(from,to) {
+    where('created_at BETWEEN ? AND ?', from, to)
+  }
+
 end
