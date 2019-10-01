@@ -21,4 +21,7 @@ class Product < ApplicationRecord
 
   belongs_to :category
 
+  has_one :skill, -> { Skill.recent(1.years.ago, Time.now)  }
+  has_many :skills
+
 end
