@@ -24,4 +24,8 @@ class Product < ApplicationRecord
   has_one :skill, -> { Skill.recent(1.years.ago, Time.now)  }
   has_many :skills
 
+
+  # TODO: このメソッドは、意味ある?
+  def explanation_size
+  end
 end
