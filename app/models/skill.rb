@@ -18,4 +18,8 @@ class Skill < ApplicationRecord
   validates :title, presence: true
   validates :experience, presence: true
   validates :career_length, presence: true
+
+  belongs_to :category, required: false
+  belongs_to :product, required: false
+
 end
