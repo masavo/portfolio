@@ -6,4 +6,5 @@ create_table "products", force: :cascade do |t|
   t.text "text"
   t.string "url"
   t.string "duration"
+  t.bigint "category_id", null: true
 end
