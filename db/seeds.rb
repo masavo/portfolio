@@ -14,6 +14,38 @@ Category.create([
 
 ]
 )
+
+Product.create([
+                 {
+                   category: Category.find_by(name: '練習用') ,
+                   title: 'ポートフォリオ',
+                   text: "Ruby on Rails で作成しました。railsの使い方の復習のために作成しました。
+                     ",
+                   url: 'https://github.com/hiroki06/portfolio',
+                   duration: '2週間'
+                 }, {
+                   category: Category.find_by(name: '練習用') ,
+                   title: 'web掲示板',
+                   text: "Ruby on Rails の研修で作成しました。基本的なCURD機能があります。
+        Railsの基本的な使い方に加えて、開発でよく使われるGemについてやテスト駆動開発について学びました。",
+                   url: 'https://github.com/hiroki06/rails-bbs',
+                   duration: '2週間'
+                 }
+                 # ,{
+                 #     category: "拡張機能",
+                 #     title: "click on board",
+                 #     text: "google検索の面倒なクリック動作を軽減します。",
+                 #     url: "",
+                 #     duration: "1~2ヶ月"
+                 # },{
+                 #     category: "webサービス",
+                 #     title: "webPageDownloader",
+                 #     text: "Ruby on Rails の研修で作成しました。",
+                 #     url: "aaaaa",
+                 #     duration: "2週間"
+                 # }
+               ])
+
 Skill.create([
                {
                  category: Category.find_by(name: 'language'),
@@ -118,35 +150,4 @@ Skill.create([
                  career_length: '2年'
                }
              ])
-
-Product.create([
-                 {
-                   category: Category.find_by(name: '練習用') ,
-                   title: 'ポートフォリオ',
-                   text: "Ruby on Rails で作成しました。railsの使い方の復習のために作成しました。
-                     ",
-                   url: 'https://github.com/hiroki06/portfolio',
-                   duration: '2週間'
-                 }, {
-                   category: Category.find_by(name: '練習用') ,
-                   title: 'web掲示板',
-                   text: "Ruby on Rails の研修で作成しました。基本的なCURD機能があります。
-        Railsの基本的な使い方に加えて、開発でよく使われるGemについてやテスト駆動開発について学びました。",
-                   url: 'https://github.com/hiroki06/rails-bbs',
-                   duration: '2週間'
-                 }
-                 # ,{
-                 #     category: "拡張機能",
-                 #     title: "click on board",
-                 #     text: "google検索の面倒なクリック動作を軽減します。",
-                 #     url: "",
-                 #     duration: "1~2ヶ月"
-                 # },{
-                 #     category: "webサービス",
-                 #     title: "webPageDownloader",
-                 #     text: "Ruby on Rails の研修で作成しました。",
-                 #     url: "aaaaa",
-                 #     duration: "2週間"
-                 # }
-               ])
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
