@@ -7,4 +7,5 @@ create_table "skills", force: :cascade do |t|
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
   t.bigint "category_id", null: true
+  t.bigint "product_id", null: true
 end
