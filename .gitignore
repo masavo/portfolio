@@ -31,3 +31,5 @@
 
 /db/portfolio_development.sqlite3
 /db/portfolio_test.sqlite3
+
+/.envrc
