@@ -33,3 +33,7 @@
 /db/portfolio_test.sqlite3
 
 /.envrc
+
+/tags
+/.tags
+/ctags
