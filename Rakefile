@@ -6,3 +6,11 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+namespace :ridgepole do
+  desc 'Apply schema definition'
+  task :apply do
+    sh 'ridgepole', '--config', 'config/database.yml', '--env', ENV.fetch('RAILS_ENV', 'development'), '--apply', '--file', 'db/schemas/Schemafile'
+    sh 'ridgepole', '--config', 'config/database.yml', '--env', ENV.fetch('RAILS_ENV', 'test'), '--apply', '--file', 'db/schemas/Schemafile'
+  end
+end
