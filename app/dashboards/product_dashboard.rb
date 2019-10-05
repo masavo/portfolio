@@ -8,12 +8,12 @@ class ProductDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    category: Field::String,
-    product_skills: Field::HasMany,
+    category: BelongsToField,
+    # product_skills: Field::HasMany,
     skills: Field::HasMany,
     id: Field::Number,
-    category: Field::String,
     title: Field::String,
+    features: Field::String,
     text: Field::Text,
     url: Field::String,
     duration: Field::String,
@@ -26,7 +26,7 @@ class ProductDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
   category
-  product_skills
+  features
   skills
   id
   ].freeze
@@ -35,10 +35,9 @@ class ProductDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
   category
-  product_skills
+  features
   skills
   id
-  category
   title
   text
   url
@@ -50,9 +49,8 @@ class ProductDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
   category
-  product_skills
+  features
   skills
-  category
   title
   text
   url

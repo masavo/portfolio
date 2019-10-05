@@ -9,7 +9,6 @@ class SkillDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     category: Field::BelongsTo,
-    product_skills: Field::HasMany,
     products: Field::HasMany,
     id: Field::Number,
     title: Field::Text,
@@ -27,7 +26,6 @@ class SkillDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
   category
-  product_skills
   products
   id
   ].freeze
@@ -52,7 +50,6 @@ class SkillDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
   category
-  product_skills
   products
   title
   experience
