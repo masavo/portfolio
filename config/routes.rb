@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
   namespace :admin do
-      resources :categories
-      resources :products
-      resources :skills
+    resources :categories
+    resources :products
+    resources :skills
 
-      root to: "categories#index"
-    end
+    root to: "categories#index"
+  end
+
   mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: '/graphql' if Rails.env.development?
   post '/graphql', to: 'graphql#execute'
   # get '/career', to: 'career#career'
