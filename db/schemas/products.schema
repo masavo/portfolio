@@ -3,6 +3,7 @@
 create_table "products", force: :cascade do |t|
   t.string "title"
   t.text "text"
+  t.string "features", array: true
   t.string "url"
   t.string "duration"
   t.bigint "category_id", null: true
