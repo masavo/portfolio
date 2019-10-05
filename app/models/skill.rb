@@ -19,11 +19,13 @@ class Skill < ApplicationRecord
   validates :experience, presence: true
   validates :career_length, presence: true
 
-  belongs_to :category, required: false
-  belongs_to :product, required: false
+  belongs_to :category
 
-  scope :recent, ->(from,to) {
-    where('created_at BETWEEN ? AND ?', from, to)
+  has_many :product_skills
+  has_many :products, through: :product_skills
+
+  scope :recent, ->(to) {
+    where('created_at BETWEEN ? AND ?', 1.year.ago, to)
   }
 
   def explanation_size

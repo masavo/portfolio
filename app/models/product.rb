@@ -21,11 +21,10 @@ class Product < ApplicationRecord
 
   belongs_to :category
 
-  has_one :skill, -> { Skill.recent(1.years.ago, Time.now)  }
-  has_many :skills
+  has_many :product_skills
+  has_many :skills, through: :product_skills
 
-
-  # TODO: このメソッドは、意味ある?
-  def explanation_size
+  def self.verbose_explain
+     eager_load(:skills).merge(Skill.recent(Time.now))
   end
 end
