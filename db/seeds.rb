@@ -11,20 +11,21 @@ Category.create([
   {name: 'language'},
   {name: 'design'},
   {name: 'office'},
+  {name: '練習用'},
 
 ]
 )
 
 Product.create([
                  {
-                   category: Category.find_by(name: '練習用') ,
+                   category_id: Category.find_by(name: '練習用').id ,
                    title: 'ポートフォリオ',
                    text: "Ruby on Rails で作成しました。railsの使い方の復習のために作成しました。
                      ",
                    url: 'https://github.com/hiroki06/portfolio',
                    duration: '2週間'
                  }, {
-                   category: Category.find_by(name: '練習用') ,
+                   category_id: Category.find_by(name: '練習用').id ,
                    title: 'web掲示板',
                    text: "Ruby on Rails の研修で作成しました。基本的なCURD機能があります。
         Railsの基本的な使い方に加えて、開発でよく使われるGemについてやテスト駆動開発について学びました。",
@@ -48,27 +49,30 @@ Product.create([
 
 Skill.create([
                {
-                 category: Category.find_by(name: 'language'),
+                 product_id: Product.find_by(title: 'ポートフォリオ').id,
+                 category_id: Category.find_by(name: 'language').id,
                  title: 'Ruby',
                  experience:
                    "CSV加工やテキスト処理、ログイン機能、DBアクセス、CRUD機能などの実装経験があります。
                    ",
                  career_length: '2年'
                }, {
-                 category: Category.find_by(name: 'language'),
+                 product_id: Product.find_by(title: 'ポートフォリオ').id,
+                 category_id: Category.find_by(name: 'language').id,
                  title: 'Ruby on Rails',
                  experience:
             "実務経験はこれからですが、railsを使って、個人運営レベルの小規模サービスは問題なく作れる自信があります。
             ",
                  career_length: '1ヶ月'
                }, {
-                 category: Category.find_by(name: 'language'),
+                 product_id: Product.find_by(title: 'web掲示板').id,
+                 category_id: Category.find_by(name: 'language').id,
                  title: 'JavaScript',
-                 experience:
-        "chrome developper toolを用いたデバッグ、consoleを用いたパフォーマンスチェックができます。
-        画面に動きをつけるよりは、計算や出力制御、Ajaxなどをより多く経験しています。
-        Gulpやテスティングフレームワークは使ったことがありません。只今勉強中です。
-        ",
+                 experience: 'test',
+        # "chrome developper toolを用いたデバッグ、consoleを用いたパフォーマンスチェックができます。
+        # 画面に動きをつけるよりは、計算や出力制御、Ajaxなどをより多く経験しています。
+        # Gulpやテスティングフレームワークは使ったことがありません。只今勉強中です。
+        # ",
                  career_length: '2年'
                }, {
                  category: Category.find_by(name: 'language'),
@@ -150,4 +154,4 @@ Skill.create([
                  career_length: '2年'
                }
              ])
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
