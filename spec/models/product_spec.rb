@@ -15,5 +15,11 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'has one category' do
+    before do
+      category = create(:category, name: 'test')
+      @skill = create(:skill,category_id: category.id) #, category: category)
+    end
+    it { expect(@skill.category.name).to eq('test') }
+  end
 end
