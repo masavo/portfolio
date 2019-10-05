@@ -1,6 +1,5 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-Dir.glob("*.schema") do |file_name|
-  puts file_name
-  require file_name.sub('.schema','')
+Dir.glob("#{ File::expand_path(__dir__)}/*.schema") do |file_name|
+  require file_name.gsub(/.*schemas\//,'./')
 end
