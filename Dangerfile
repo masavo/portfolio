@@ -9,3 +9,5 @@ if issue_numbers
 else
   warn('no parent issue')
 end
+
+message("test")
