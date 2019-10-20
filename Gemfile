@@ -45,6 +45,7 @@ group :development do
   gem 'brakeman' # セキュリティ問題をチェックしてくれる
   gem 'bullet'
   gem 'bundle-audit'
+  gem 'danger', require: false
   gem 'graphiql-rails'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rack-mini-profiler'
