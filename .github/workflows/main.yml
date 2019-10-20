@@ -12,7 +12,9 @@ jobs:
           architecture: 'x64'
       - name: install danger
         run: |
-          gem install danger
+          brew install postgresql
+          gem install bundler
+          bundle install
     steps:
       - uses: actions/checkout@v1
       - name: run danger
