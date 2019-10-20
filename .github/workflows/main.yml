@@ -15,6 +15,7 @@ jobs:
           architecture: 'x64'
       - name: install danger
         run: |
+          gem install bundler:2.0.1
           bundle install
       - name: run danger
         env:
