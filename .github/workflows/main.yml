@@ -5,6 +5,14 @@ on:
 jobs:
   build:
     runs-on: macOS-latest
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.5'
+          architecture: 'x64'
+      - name: install danger
+        run: |
+          gem install danger
     steps:
       - uses: actions/checkout@v1
       - name: run danger
