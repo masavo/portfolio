@@ -12,7 +12,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'html2slim'
 gem 'jquery-rails'
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'pg'
 gem 'puma', '~> 3.11' # the app server
 gem 'rails', '~> 5.2.1'
