@@ -11,11 +11,11 @@ jobs:
       - name: Setup Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: '2.6'
+          ruby-version: '2.5.1'
           architecture: 'x64'
       - name: install danger
         run: |
-          gem install bundler --force
+          gem install bundler
           bundle install
       - name: run danger
         env:
