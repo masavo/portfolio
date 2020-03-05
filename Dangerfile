@@ -4,10 +4,8 @@ issue_numbers = pr_title.scan(/(\d+)_/)
 
 if issue_numbers
   issue_numbers.map do |num|
-    message("msnrhrk/dotfiles#{num}")
+    message("msnrhrk/dotfiles##{num.first}")
   end
 else
   warn('no parent issue')
 end
-
-message("test")
